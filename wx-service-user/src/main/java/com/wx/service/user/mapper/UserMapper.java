@@ -60,6 +60,14 @@ public interface UserMapper {
      */
     User findByName(String loginName);
 
+    /**
+     * @param userId
+     * @return
+     */
+    int deleteById(@Param("userId") long userId);
+
+
+
 
 
 }

@@ -6,4 +6,16 @@
     <setting name="mapUnderscoreToCamelCase" value="true"/>
   </settings>
 
+  <plugins>
+
+    <plugin interceptor="com.wx.service.interceptor.PerformanceInterceptor">
+    </plugin>
+
+    <plugin interceptor="com.baomidou.mybatisplus.plugins.SqlExplainInterceptor">
+      <property name="stopProceed" value="false" />
+    </plugin>
+
+
+  </plugins>
+
 </configuration>

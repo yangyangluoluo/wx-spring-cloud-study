@@ -2,6 +2,8 @@ package com.wx.service.user;
 
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.wx.service.interceptor.PerformanceInterceptor;
+import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
@@ -79,11 +81,18 @@ public class UserServiceApplication{
         return dataSource;
     }
 
+
     public SqlSessionFactory sqlSessionFactory() throws Exception {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource());
         return sqlSessionFactoryBean.getObject();
     }
+
+
+
+
+
+
 
 }
 

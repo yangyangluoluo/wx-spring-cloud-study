@@ -23,6 +23,7 @@
     delete from us_user
     where user_id = #{userId,jdbcType=BIGINT}
   </delete>
+
   <insert id="insert" parameterType="com.wx.service.user.entity.User">
     <!--
       WARNING - @mbg.generated
@@ -78,6 +79,7 @@
     from us_user
     where login_name = #{loginName}
   </select>
+
 
 
 
