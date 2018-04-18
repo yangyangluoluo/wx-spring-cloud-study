@@ -1,0 +1,44 @@
+#名称
+spring:
+  application:
+    name: service-user
+  activemq:
+    broker-url:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/wx_study?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+#服务注册中心
+eureka:
+  client:
+    service-url:
+           defaultZone: http://localhost:9000/eureka
+#配置端口
+server:
+  port: 9010
+
+
+#多数据源
+datasource:
+  #主库
+  master:
+    jdbcUrl: jdbc:mysql://127.0.0.1:3306/wx_study?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  #从库
+  slave:
+    jdbcUrl: jdbc:mysql://127.0.0.1:3306/wx_study?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+##mybatis
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.wx.service.entity
+  check-config-location: true
+  config-location: classpath:mybatis-config.xml

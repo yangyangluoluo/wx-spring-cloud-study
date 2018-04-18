@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <!--MyBatis3-->
+  <context id="cloudDiskTables" targetRuntime="MyBatis3Simple"
+           defaultModelType="flat">
+    <property name="beginningDelimiter" value="`" />
+    <property name="endingDelimiter" value="`" />
+
+    <commentGenerator>
+      <property name="suppressDate" value="true" />
+    </commentGenerator>
+
+
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                    connectionURL="jdbc:mysql://127.0.0.1:3306/wx_study" userId="root" password="123456">
+    </jdbcConnection>
+
+    <!-- 配置表、Java属性的对应关系 -->
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+
+    <!-- 配置生成文件的位置 -->
+    <javaModelGenerator targetPackage="com.wx.service.user.entity" targetProject="src/main/java">
+      <property name="enableSubPackages" value="true" />
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator>
+
+    <!-- xml生成器 -->
+    <sqlMapGenerator targetPackage="mybatis.mapper" targetProject="src/main/resources/">
+      <property name="enableSubPackages" value="true" />
+    </sqlMapGenerator>
+
+    <!-- 生成dao -->
+    <javaClientGenerator type="XMLMAPPER"
+                         targetPackage="com.wx.service.user.mapper" targetProject="src/main/java">
+      <property name="enableSubPackages" value="true" />
+    </javaClientGenerator>
+
+    <!-- 配置需要哪些表需要生成 全部生成-->
+
+    <table tableName="%">
+        <generatedKey column="id" sqlStatement="mysql" />
+    </table>
+
+
+    <!-- 单独设置一张表的自动代码生成 -->
+    <!--<table  tableName="jc_user" domainObjectName="User"-->
+           <!--enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true" >-->
+    <!--</table>-->
+
+
+  </context>
+</generatorConfiguration>
+

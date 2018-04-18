@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/wx-api-admin/wx-api-admin.iml" filepath="$PROJECT_DIR$/wx-api-admin/wx-api-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wx-server/wx-server.iml" filepath="$PROJECT_DIR$/wx-server/wx-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wx-service-user/wx-service-user.iml" filepath="$PROJECT_DIR$/wx-service-user/wx-service-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wx-spring-cloud-study.iml" filepath="$PROJECT_DIR$/wx-spring-cloud-study.iml" />
+    </modules>
+  </component>
+</project>
